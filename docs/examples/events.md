@@ -49,7 +49,7 @@ module.exports = ({ env }) => ({
 			events: [
 				{
 					name: 'update-user-name',
-					handler: ({ strapi }, socket, name) => {
+					handler: ({ strapi }, socket, id, name) => {
 						strapi.log.info(`[io] trigger update for socket ${socket.id}.`);
 
 						// update the respective users name.
